@@ -1,0 +1,14 @@
+ /**
+    * Print an array of Object variables on a single line in their order of
+    *   appearance in the array. We must change the parameter to Object[] because
+    *   we want the method to be able to print the details of arrays of any Object
+    *   type.
+    * @param array the array of elements to print
+    */
+    public static void print(Object[] array) {
+        for (int i = 0 ; i < array.length ; i++) {
+            System.out.print(array[i] + " ") ;
+        }
+        System.out.println() ;
+    }
+}
