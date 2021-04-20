@@ -1,0 +1,21 @@
+/**
+    * Sort an array of Comparable elements in place. The use of the Comparable interface
+    *   allows us to use the compareTo() method. The parameter T is the types of object
+    *   the method can accept, which is any data type (all wrapper classes and the String
+    *   class implement Comparable by default) or class that implements the Comparable
+    *   interface.
+    * @param array the array of variables to be sorted (and returned)
+    */
+    public static <T extends Comparable<T>> void sort(T[] array) {
+        for (int i = 0 ; i < array.length - 1 ; i++) {
+            int smallest = i ;
+            for (int j = i + 1 ; j < array.length ; j++) {
+                if (array[smallest].compareTo(array[j]) > 0) {
+                    smallest = j ;
+                }
+            }
+            T temp = array[i] ;
+            array[i] = array[smallest] ;
+            array[smallest] = temp ;
+        }
+    }
